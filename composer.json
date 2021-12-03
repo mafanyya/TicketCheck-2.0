@@ -1,0 +1,21 @@
+{
+    "name": "mpogo/ticket-checkk",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mafanyya",
+            "email": "mafanya.nyaa@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": ["src",
+                "src/connect.php"],
+            "Registration\\": ["src/Registration"],
+            "Checking\\": ["src/Check"]
+        }
+
+    }
+}
