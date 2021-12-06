@@ -4,22 +4,21 @@ namespace Registration;
 
 class InsertPassengerData
 {
+
+public function __construct($newName, $newSurname, $newGender)
+{
+    $this->newSurname = $newSurname;
+    $this->newName = $newName;
+    $this->newGender = $newGender;
+
+}
+
     public function insertPassengerData($connect)
     {
-        $newSurname = new RegSurname();
-        $newSurname->getSurname();
 
-        $newName = new RegName();
-        $newName->getName();
+        $newPassenger= "INSERT INTO passengers (Last_Name,First_Name,Gender) VALUES ('$this->newSurname','$this->newName', '$this->newGender')";
 
-        $newGender = new RegGender();
-        $newGender->getGender();
-
-
-
-        $newPassenger= "INSERT INTO passengers (Last_Name,First_Name,Gender) VALUES ('$newSurname', '$newName', '$newGender')";
-
-        if(mysqli_query($connect, $newPassenger)){
+        if(mysqli_query($connect,$newPassenger)){
             echo "...";
         } else{
             echo "ERROR: Could not able to execute $newPassenger. " . mysqli_error($connect);

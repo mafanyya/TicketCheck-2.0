@@ -4,7 +4,7 @@ namespace Registration;
 
 class RegSurname
 {
-    protected string $surname;
+    protected ?string $surname;
 
     public function __toString()
     {

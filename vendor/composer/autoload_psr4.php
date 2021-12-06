@@ -8,5 +8,5 @@ $baseDir = dirname($vendorDir);
 return array(
     'Registration\\' => array($baseDir . '/src/Registration'),
     'Checking\\' => array($baseDir . '/src/Check'),
-    'App\\' => array($baseDir . '/src', $baseDir . '/src/connect.php'),
+    'App\\' => array($baseDir . '/src'),
 );

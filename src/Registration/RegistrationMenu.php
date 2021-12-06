@@ -1,12 +1,12 @@
 <?php
-namespace Registration;
-use Registration\InsertPassengerData;
 
+namespace Registration;
+
+include "queries/InsertPassengerData.php";
+include "queries/GetPassengerID.php";
 
 class RegistrationMenu
 {
-
-
     public function registrationMenu($connect)
     {
         echo ("---TICKET REGISTRATION---") . PHP_EOL;
@@ -25,31 +25,40 @@ class RegistrationMenu
         $newGender->getGender();
 
 
-
-//        //insert passenger data
-//        $insertpassenger = new InsertPassengerData();
-//        $insertpassenger->insertPassengerData($connect);
-
-
         $newDate = new \Registration\RegDate();
         $newDate->regDate();
         $newDate->getDate();
 
 
         $newTrain = new \Registration\RegTrain();
-        $newTrain -> regTrain();
-        $newTrain -> getTrain();
+        $newTrain->regTrain();
+        $newTrain->getTrain();
 
 
         $newSeat = new \Registration\RegSeat();
-        $newSeat -> regSeat();
-        $newSeat ->getSeat();
+        $newSeat->regSeat();
+        $newSeat->getSeat();
         global $newSeat;
 
 
         $newDiscount = new \Registration\RegDiscount();
-        $newDiscount ->isDiscount();
-        $newDiscount ->getDiscount();
+        $newDiscount->isDiscount();
+        $newDiscount->getDiscount();
+
+        $newPassengerID = new \Registration\GetPassengerID();
+        $newPassengerID->setPassengerID($connect);
+        $newPassengerID->getPassengerID();
+
+
+        $newHash = new RegHash();
+        $newHash->regHash($newPassengerID);
+        $newHash->getHash();
+
+        $insertpassenger = new InsertPassengerData($newName, $newSurname, $newGender);
+        $insertpassenger->insertPassengerData($connect);
+
+
+
 
         echo "
         $newSurname,
@@ -58,8 +67,8 @@ class RegistrationMenu
         $newTrain,
         $newDate,
         $newSeat,
-        $newDiscount";
-
+        $newDiscount
+        $newHash";
 
 
     }

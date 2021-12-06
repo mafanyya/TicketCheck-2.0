@@ -33,7 +33,6 @@ class ComposerStaticInit2c88fcfcf36c22b2a51a5d29a3265f04
         'App\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
-            1 => __DIR__ . '/../..' . '/src/connect.php',
         ),
     );
 

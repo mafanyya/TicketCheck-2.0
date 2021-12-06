@@ -2,14 +2,14 @@
 
 namespace App;
 
-require "connect.php";
-
 class App
 {
-    public function run()
+    public function __construct($connect)
     {
-        $connect = new Connect1();
-        $connect->getConnect();
+    }
+
+    public function run($connect)
+    {
         $app = new Menu();
         $app->welcome($connect);
     }
