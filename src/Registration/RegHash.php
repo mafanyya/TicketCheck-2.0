@@ -4,25 +4,29 @@ namespace Registration;
 
 class RegHash
 {
-    protected $newPassengerID;
+    protected  int $newTicketID;
     protected string $hash;
 
 
-//    function __construct($newPassengerID)
-//    {
-//        $this->newPassengerID =$newPassengerID;
-//    }
-    public function __toString()
+    function __construct()
+    {
+
+
+    }
+
+    public function __toString(): string
     {
         // TODO: Implement __toString() method.
         return $this->hash;
+
     }
 
-    public function regHash($newPassengerID):void
-    {
 
-        $hash = sha1($this->newPassengerID);
+    public function regHash($newTicketID):void
+    {
+        $hash = sha1($newTicketID);
         $this->hash = $hash;
+
 
     }
 

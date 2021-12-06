@@ -4,7 +4,7 @@ namespace Registration;
 
 class GetPassengerID
 {
-    protected \mysqli_result $passengerID;
+   public \mysqli_result $passengerID;
 
     public function __construct()
     {
