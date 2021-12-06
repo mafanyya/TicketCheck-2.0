@@ -5,6 +5,7 @@ namespace Registration;
 include "queries/InsertPassengerData.php";
 include "queries/GetPassengerID.php";
 include "queries/GetTicketID.php";
+include "queries/InsertTicket.php";
 
 class RegistrationMenu
 {
@@ -39,7 +40,7 @@ class RegistrationMenu
         $newSeat = new \Registration\RegSeat();
         $newSeat->regSeat();
         $newSeat->getSeat();
-        global $newSeat;
+
 
 
         $newDiscount = new \Registration\RegDiscount();
@@ -48,6 +49,7 @@ class RegistrationMenu
 
         $insertpassenger = new InsertPassengerData($newName, $newSurname, $newGender);
         $insertpassenger->insertPassengerData($connect);
+
 
         $newPassengerID = new \Registration\GetPassengerID();
         $newPassengerID->setPassengerID($connect);
@@ -60,11 +62,16 @@ class RegistrationMenu
         $newTicketID->getTicketID();
 
 
-
-
-        $newHash = new RegHash();
+        $newHash = new \Registration\RegHash();
         $newHash->regHash($newTicketID);
         $newHash->getHash();
+
+
+
+        $insertTicket = new InsertTicket($newDate, $newTrain, $newSeat, $newDiscount,
+            $newPassengerID,$newHash, date("Y-m-d H:i:s"));
+
+        $insertTicket->insertTicketData($connect);
 
 
 

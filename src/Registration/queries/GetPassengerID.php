@@ -4,10 +4,16 @@ namespace Registration;
 
 class GetPassengerID
 {
-   public \mysqli_result $passengerID;
+   public int $passengerID;
 
     public function __construct()
     {
+    }
+
+    public function __toString():string
+    {
+        // TODO: Implement __toString() method.
+        return $this->passengerID;
     }
 
     public function setPassengerID($connect)
@@ -17,10 +23,10 @@ class GetPassengerID
 
         $row = mysqli_fetch_assoc($passengerID);
 
-        $passenger_id = $row['MAX(Passenger_id)'];
+        $passengerID = $row['MAX(Passenger_id)'];
         $this->passengerID = $passengerID;
     }
-    public function getPassengerID()
+    public function getPassengerID():int
     {
         return $this->passengerID;
     }

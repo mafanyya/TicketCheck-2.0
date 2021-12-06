@@ -4,23 +4,29 @@ namespace Registration;
 
 class InsertTicket
 {
-    public function __construct($newName, $newSurname, $newGender)
+    public function __construct($newDate, $newTrain, $newSeat, $newDiscount, $newPassengerID, $newHash, $currentTime)
     {
-        $this->newSurname = $newSurname;
-        $this->newName = $newName;
-        $this->newGender = $newGender;
+       $this->newDate = $newDate;
+       $this->newTrain = $newTrain;
+       $this->newSeat = $newSeat;
+       $this->newDiscount = $newDiscount;
+       $this->newPassengerID = $newPassengerID;
+       $this->newHash = $newHash;
+       $this->currentTime = $currentTime;
 
     }
 
-    public function insertPassengerData($connect)
+    public function insertTicketData($connect)
     {
 
-        $newPassenger= "INSERT INTO passengers (Last_Name,First_Name,Gender) VALUES ('$this->newSurname','$this->newName', '$this->newGender')";
 
-        if(mysqli_query($connect,$newPassenger)){
+        $newTicket= "INSERT INTO booking (Train_Nr, Passenger_id, Date, Discount_id, Seat, Hash, Registration_Time)
+        VALUES ('$this->newTrain', '$this->newPassengerID', '$this->newDate', '$this->newDiscount','$this->newSeat','$this->newHash','$this->currentTime')";
+
+        if(mysqli_query($connect,$newTicket)){
             echo "...";
         } else{
-            echo "ERROR: Could not able to execute $newPassenger. " . mysqli_error($connect);
+            echo "ERROR: Could not able to execute $newTicket. " . mysqli_error($connect);
         }
     }
 

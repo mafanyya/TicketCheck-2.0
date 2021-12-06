@@ -7,10 +7,6 @@ class GetTicketID
 
     public int $ticketID;
 
-    public function __construct()
-    {
-    }
-
     public function __toString():string
     {
         // TODO: Implement __toString() method.

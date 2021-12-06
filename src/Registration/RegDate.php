@@ -25,8 +25,7 @@ class RegDate
         echo ("Month:") . PHP_EOL;
         $month = (int)fgets(STDIN);
 
-        echo ("Year:") . PHP_EOL;
-        $year = (int)fgets(STDIN);
+        $year = date("Y");
 
         $this->day = $day;
         $this->month = $month;
