@@ -9,9 +9,8 @@ class RegDate
     protected string $year;
     protected string $date;
 
-    public function __toString()
+    public function __toString():string
     {
-        // TODO: Implement __toString() method.
         return $this->date;
     }
 
@@ -35,11 +34,11 @@ class RegDate
 
     public function isValid(): bool
     {
-        if (checkdate($this->month, $this->day, $this->year) & $this->month!= NULL & $this->day!= NULL & $this->year!= NULL) {
-            if($this->month <=9){
+        if (checkdate($this->month, $this->day, $this->year) & $this->month != NULL & $this->day != NULL & $this->year != NULL) {
+            if ($this->month <= 9) {
                 $this->month = "0$this->month";
             }
-            if($this->day <=9){
+            if ($this->day <= 9) {
                 $this->day = "0$this->day";
             }
             return true;
@@ -51,7 +50,7 @@ class RegDate
         }
     }
 
-    public function getDate():string
+    public function getDate(): string
     {
         $this->date = "$this->year-$this->month-$this->day";
         return $this->date;

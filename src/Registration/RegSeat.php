@@ -8,14 +8,12 @@ class RegSeat
 
     public function __toString(): string
     {
-        // TODO: Implement __toString() method.
         return $this->seat;
-
     }
 
-    public function regSeat():void
+    public function regSeat(): void
     {
-        echo("Choose a seat (1 - 50)").PHP_EOL;
+        echo ("Choose a seat (1 - 50)") . PHP_EOL;
 
         $seat = fgets(STDIN);
         $this->seat = $seat;
@@ -23,24 +21,25 @@ class RegSeat
         $this->isValid();
 
     }
-    public function isValid():bool
+
+    public function isValid(): bool
     {
-        if(is_numeric($this->seat)){
-            if($this->seat >= 1 & $this->seat <= 50 ){
+        if (is_numeric($this->seat)) {
+            if ($this->seat >= 1 & $this->seat <= 50) {
                 return true;
-            }else{
+            } else {
                 echo("Value is invalid! ");
                 $this->regSeat();
                 return false;
             }
-        }else{
+        } else {
             echo("Value is invalid! ");
             $this->regSeat();
             return false;
         }
     }
 
-    public function getSeat():string
+    public function getSeat(): string
     {
         return $this->seat;
     }

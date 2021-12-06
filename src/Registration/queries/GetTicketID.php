@@ -4,19 +4,17 @@ namespace Registration;
 
 class GetTicketID
 {
-
     public int $ticketID;
 
-    public function __toString():string
+    public function __toString(): string
     {
-        // TODO: Implement __toString() method.
         return $this->ticketID;
     }
 
-    public function setTicketID($connect):void
+    public function setTicketID($connect): void
     {
-        $selectId= "SELECT MAX(Ticket_id) FROM booking";
-        $ticketID = mysqli_query($connect,$selectId);
+        $selectId = "SELECT MAX(Ticket_id) FROM booking";
+        $ticketID = mysqli_query($connect, $selectId);
 
         $row = mysqli_fetch_assoc($ticketID);
 
@@ -25,7 +23,8 @@ class GetTicketID
 
 
     }
-    public function getTicketID():int
+
+    public function getTicketID(): int
     {
         return $this->ticketID;
     }

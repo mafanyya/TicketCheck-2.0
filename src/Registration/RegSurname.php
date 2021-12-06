@@ -6,13 +6,11 @@ class RegSurname
 {
     protected ?string $surname;
 
-    public function __toString()
+    public function __toString(): string
     {
-        // TODO: Implement __toString() method.
+
         return $this->surname;
     }
-
-
 
     public function regSurname(): void
     {
@@ -25,10 +23,10 @@ class RegSurname
 
     public function isValid(): bool
     {
-        if (preg_match("/[a-z-]/", $this->surname) & $this->surname!= NULL) {
+        if (preg_match("/[a-z-]/", $this->surname) & $this->surname != NULL) {
             return true;
         } else {
-            echo("Error! Enter a correct value!").PHP_EOL;
+            echo ("Error! Enter a correct value!") . PHP_EOL;
             $this->regSurname();
             return false;
 

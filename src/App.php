@@ -8,7 +8,7 @@ class App
     {
     }
 
-    public function run($connect)
+    public function run($connect):void
     {
         $app = new Menu();
         $app->welcome($connect);

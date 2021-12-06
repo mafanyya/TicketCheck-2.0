@@ -8,19 +8,18 @@ class RegHash
 
     public function __toString(): string
     {
-        // TODO: Implement __toString() method.
         return $this->hash;
 
     }
 
-    public function regHash($newTicketID):void
+    public function regHash($newTicketID): void
     {
         $hash = sha1($newTicketID);
         $this->hash = $hash;
 
     }
 
-    public function getHash():string
+    public function getHash(): string
     {
         return $this->hash;
     }

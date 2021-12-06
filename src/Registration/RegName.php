@@ -6,9 +6,8 @@ class RegName
 {
     protected string $name;
 
-    public function __toString()
+    public function __toString(): string
     {
-        // TODO: Implement __toString() method.
         return $this->name;
     }
 
@@ -26,10 +25,9 @@ class RegName
         if (preg_match("/[a-z-]/", $this->name) & $this->name != NULL) {
             return true;
         } else {
-            echo("Error! Enter a correct value!").PHP_EOL;
+            echo ("Error! Enter a correct value!") . PHP_EOL;
             $this->regName();
             return false;
-
 
         }
     }

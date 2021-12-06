@@ -4,9 +4,9 @@ namespace Registration;
 
 class RegTrain
 {
-    protected  string $train;
+    protected string $train;
 
-    public function __toString()
+    public function __toString(): string
     {
         return $this->train;
     }
@@ -37,7 +37,6 @@ class RegTrain
         }
 
     }
-
 
     public function getTrain(): string
     {

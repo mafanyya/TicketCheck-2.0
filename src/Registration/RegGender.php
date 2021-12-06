@@ -6,9 +6,8 @@ class RegGender
 {
     protected string $gender;
 
-    public function __toString()
+    public function __toString(): string
     {
-        // TODO: Implement __toString() method.
         return $this->gender;
     }
 
@@ -23,10 +22,12 @@ class RegGender
 
     public function isValid(): void
     {
-        switch ($this->gender){
-            case 1: $this->gender = "M";
+        switch ($this->gender) {
+            case 1:
+                $this->gender = "M";
                 break;
-            case 2: $this->gender = "F";
+            case 2:
+                $this->gender = "F";
                 break;
             default:
                 echo("Value is invalid! ");
