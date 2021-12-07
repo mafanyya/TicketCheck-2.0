@@ -7,6 +7,9 @@ include "queries/GetPassengerID.php";
 include "queries/GetTicketID.php";
 include "queries/InsertTicket.php";
 include "queries/GetPrice.php";
+include "queries/GetArrivalTime.php";
+include "queries/GetDepartureTime.php";
+
 
 class RegistrationMenu
 {
@@ -66,7 +69,22 @@ class RegistrationMenu
         $price->getPriceDB($connect);
         $price->getPrice();
 
+        $arrivalTime = new GetArrivalTime($newTrain);
+        $arrivalTime->setArrivalTime($connect);
+        $arrivalTime->getArrivalTime();
+
+        $departureTime = new GetDepartureTime($newTrain);
+        $departureTime->setDepartureTime($connect);
+        $departureTime->getDepartureTime();
+
         echo("Your price is: $price zl");
+
+        echo("Your ticket-hash is $newHash");
+
+        echo("Your arrival time is $arrivalTime");
+
+        echo("Your departure time is $departureTime");
+
 
     }
 

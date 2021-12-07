@@ -3,22 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97444732-9b85-43cb-bf2e-92bd5b0f846f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/connect.php" beforeDir="false" afterPath="$PROJECT_DIR$/connect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegDate.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegDate.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegDiscount.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegDiscount.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegGender.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegGender.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegHash.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegHash.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegName.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegSeat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegSeat.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegSurname.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegSurname.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/RegTrain.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegTrain.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Registration/RegistrationMenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/RegistrationMenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/queries/GetPassengerID.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/queries/GetPassengerID.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/queries/GetTicketID.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/queries/GetTicketID.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/queries/InsertPassengerData.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/queries/InsertPassengerData.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration/queries/InsertTicket.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration/queries/InsertTicket.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.php" beforeDir="false" afterPath="$PROJECT_DIR$/test.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +63,8 @@
       <workItem from="1638733116086" duration="1236000" />
       <workItem from="1638746215312" duration="5000" />
       <workItem from="1638808568576" duration="6026000" />
-      <workItem from="1638815074848" duration="9244000" />
+      <workItem from="1638815074848" duration="10161000" />
+      <workItem from="1638893365468" duration="3133000" />
     </task>
     <servers />
   </component>
