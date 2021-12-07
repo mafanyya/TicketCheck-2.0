@@ -34,7 +34,7 @@ class Menu
 
             case 2:
                 $check = new CheckingMenu();
-                $check->checkingMenu();
+                $check->checkingMenu($connect);
                 break;
             default:
                 echo "Error, please enter the correct value " . PHP_EOL;
