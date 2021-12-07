@@ -9,6 +9,7 @@ include "queries/InsertTicket.php";
 include "queries/GetPrice.php";
 include "queries/GetArrivalTime.php";
 include "queries/GetDepartureTime.php";
+include "queries/GetDiscount.php";
 
 
 class RegistrationMenu
@@ -77,14 +78,24 @@ class RegistrationMenu
         $departureTime->setDepartureTime($connect);
         $departureTime->getDepartureTime();
 
-        echo("Your price is: $price zl");
+        $discount = new GetDiscount($newDiscount);
+        $discount->setDiscount($connect);
+        $discount->getDiscount();
 
-        echo("Your ticket-hash is $newHash");
 
-        echo("Your arrival time is $arrivalTime");
+        echo "Registration successfully completed" . PHP_EOL;
 
-        echo("Your departure time is $departureTime");
+        echo "$newSurname $newName" . PHP_EOL;
+        echo "Train nr.: $newTrain" . PHP_EOL;
+        echo "Seat.: $newSeat" . PHP_EOL;
 
+        echo "Date: $newDate" . PHP_EOL;
+        echo "Departure time: $departureTime" . PHP_EOL;
+        echo "Arrival time: $arrivalTime" . PHP_EOL;
+        echo "Price: $price (your discount is $discount)" . PHP_EOL;
+
+        echo "Your ticket-hash is $newHash" . PHP_EOL;
+        echo "PLEASE REMEMBER IT!" . PHP_EOL;
 
     }
 
